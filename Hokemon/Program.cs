@@ -14,13 +14,11 @@ namespace Hokemon
 
             hoke01.get_details();
 
-            Hokemon hoke02 = new Hokemon();
+            Enemy_Hokemon hoke02 = new Enemy_Hokemon();
 
             hoke02.get_details();
 
-            Hokemon hoke03 = new Hokemon();
 
-            hoke03.get_details();
         }
     }
 }

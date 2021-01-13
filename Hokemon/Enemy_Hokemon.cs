@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Hokemon
 {
-    class Hokemon
+    class Enemy_Hokemon
     {
         // Hokemon attributes
         private string name;
@@ -15,7 +15,7 @@ namespace Hokemon
         private int defense;
 
         // CONSTRUCTOR METHOD FOR THE HOKEMON
-        public Hokemon()
+        public Enemy_Hokemon()
         {
             provide_name();
             max_health = 100;
@@ -25,11 +25,6 @@ namespace Hokemon
             defense = random_int_generator(10, 100);
         }
 
-        public string get_name()
-        {
-            return name;
-        }
-
         public void get_details()
         {
             Console.WriteLine("***************\nName: {0} \nHealth: {1}/{2} \nAttack: {3} \nSpeed: {4} \nDefense {5} \n***************\n", name, health, max_health, attack, speed, defense);
@@ -37,8 +32,13 @@ namespace Hokemon
 
         public void provide_name()
         {
-            Console.WriteLine("Enter the name of the Hokemon: ");
-            name = Console.ReadLine();
+            string[] names = { "Hulbasour", "Heevee", "Hitto", "Horlax", "Harmander", "Hirtle" };
+            
+            Random rnd = new Random();
+            int randomValue;
+            randomValue = rnd.Next(0, 5);
+            name = names[randomValue];
+       
         }
 
         public int random_int_generator(int min_value, int max_value) // PARAMETERS (int min_value, int max_value)
@@ -50,11 +50,6 @@ namespace Hokemon
             randomValue = rnd.Next(min_value, max_value);
 
             return randomValue;
-        }
-
-        public void battle_arena()
-        {
-            Console.WriteLine("Your ");
         }
     }
 }
