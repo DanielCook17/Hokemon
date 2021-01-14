@@ -37,10 +37,18 @@ namespace Hokemon
                 chosenAttackMove = attackMoves[randomValue];
 
 
-                if (attacker.attackCalculator > defender.defenceCalculator)
+                if (attacker.attackCalculator() > defender.defenceCalculator())
                 {
-
+                    int damage;
+                    damage = (attacker.attackCalculator() - defender.defenceCalculator());
+                    defender.Health = defender.Health - damage;
+                    if (defender.Health < 1)
+                    {
+                        X = false;
+                    }
+                   
                 }
+                else
             }
         }
     }

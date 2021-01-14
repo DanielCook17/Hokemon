@@ -20,6 +20,12 @@ namespace Hokemon
             get { return name; }
             set { name = value; }
         }
+
+        public int Health
+        {
+            get { return health; }
+            set { health = value; }
+        }
         public Hokemon()
         {
             provide_name();
