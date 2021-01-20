@@ -33,13 +33,13 @@ namespace Hokemon
             hoke03.definition();
             hoke04.definition();
 
-            /*
+            
             Battle_Arena newBattleObject = new Battle_Arena();
 
             newBattleObject.requestAChallenger(hoke02);
 
             newBattleObject.theBattle(hoke02, hoke01);
-            */
+            
         }   
     }
 }
