@@ -52,6 +52,7 @@ namespace Hokemon
 
         public void provide_name()
         {
+            Console.WriteLine("You found a wild Hokemon\n");
             Console.WriteLine("Enter the name of the Hokemon: ");
             name = Console.ReadLine();
         }
@@ -72,7 +73,7 @@ namespace Hokemon
             int attackValue;
             Random rnd = new Random();
 
-            attackValue = (attack + speed) / 10 * rnd.Next(1,2);
+            attackValue = (attack + speed) / 10 * rnd.Next(1,5);
 
             return attackValue;
         }
@@ -82,7 +83,7 @@ namespace Hokemon
             int defenceValue;
             Random rnd = new Random();
 
-            defenceValue = (defence + speed) / 10 * rnd.Next(1,2);
+            defenceValue = (defence + speed) / 10 * rnd.Next(1,5);
 
             return defenceValue;
         }
