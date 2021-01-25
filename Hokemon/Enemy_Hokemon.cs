@@ -13,9 +13,14 @@ namespace Hokemon
         private int attack;
         private int speed;
         private int defence;
+        private string team;
 
         // CONSTRUCTOR METHOD FOR THE HOKEMON
-
+        public string Team
+        {
+            get { return team; }
+            set { team = value; }
+        }
         public string Name
         {
             get { return name; }

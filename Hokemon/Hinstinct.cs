@@ -9,9 +9,9 @@ namespace Hokemon
         public string team = "Hinstinct";
         public string colour = "Yellow";
 
-        public void definition()
+        public Hinstinct()
         {
-            Console.WriteLine("I am {0}, I am part of the deadly Hinstinct tribe!\n", Name);
+            Team = "Hinstinct";
         }
     }
 }

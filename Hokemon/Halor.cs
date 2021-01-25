@@ -9,9 +9,9 @@ namespace Hokemon
         public string team = "Halor";
         public string colour = "Red";
 
-        public void definition()
+        public Halor()
         {
-            Console.WriteLine("I am {0}, I am part of the ferocious Halor tribe!\n", Name);
+            Team = "Halor";
         }
     }
 
