@@ -38,7 +38,7 @@ namespace Hokemon
             get { return health; }
             set { health = value; }
         }
-        public Hokemon() // CONSTRUCTOR method
+        public Hokemon()
         {
             name = "Defaukt";
             max_health = 100;

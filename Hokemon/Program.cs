@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Text;
 
 namespace Hokemon
 {
@@ -6,8 +8,13 @@ namespace Hokemon
     {
         static void Main(string[] args)
         {
-            
+            Enemy_Hokemon[] ChallengersArray = new Enemy_Hokemon[3];
+            Battle_Arena newBattleObject = new Battle_Arena();
 
+            Random rnd = new Random();
+
+            Boolean repeatGame = true;
+            string result;
 
             Console.WriteLine("Hello welcome to Hokeworld home of the Hokemon\n");
             Console.WriteLine("Press any key to continue...");
@@ -17,6 +24,7 @@ namespace Hokemon
             // Instantiation of new Hokemon
 
             Halor playerhoke = new Halor(); // Instantiate new Hokemon object to as Hoke01 
+
             playerhoke.get_details();
             Console.WriteLine("Attack Value is: {0}", playerhoke.attackCalculator());
             Console.WriteLine("Defence Value is: {0}\n", playerhoke.defenceCalculator());
@@ -33,7 +41,18 @@ namespace Hokemon
             Console.ReadKey();
             Console.WriteLine("");
 
+            while (repeatGame == true)
+            {
+                newBattleObject.requestAChallenger(hoke02);
 
+                for (int i = 0; i<3; i++)
+                {
+                    ChallengersArray[i] = new Enemy_Hokemon();
+                }
+
+                newBattleObject.theBattle(ChallengersArray[rnd.Next(0, ChallengersArray.Length)], playerhoke);
+
+            }
 
 
 
@@ -49,59 +68,8 @@ namespace Hokemon
              hoke04.definition();
             */
 
-            Battle_Arena newBattleObject = new Battle_Arena();
-            newBattleObject.theBattle(hoke02, playerhoke);
 
-            Boolean playAgain = true;
-            string input;
-
-            Console.WriteLine("Would you like to have another battle (y/n):");
-            input = Console.ReadLine();
-            if (input == "y")
-            {
-                playAgain = true;
-            }
-            else
-            {
-                playAgain = false;
-            }
-
-            while (playAgain = true)
-            { 
-                {
-                    Hinstinct[] challengerArray = new Hinstinct[10];
-                    for (int i = 0; i < 10; i++)
-                    {
-                        challengerArray[i] = new Hinstinct();
-                    }
-                    Console.WriteLine("An enemey Hokemon appeared!\n");
-                    challengerArray.get_details();
-                    Console.WriteLine("Attack Value is: {0}", challengerArray.attackCalculator());
-                    Console.WriteLine("Defence Value is: {0}\n", challengerArray.defenceCalculator());
-                    Console.WriteLine("Press any key to continue...");
-                    Console.ReadKey();
-                    Console.WriteLine("");
-
-                    Battle_Arena moreNewBattleObject = new Battle_Arena();
-                    newBattleObject.theBattle(challengerArray, playerhoke);
-
-                    Console.WriteLine("Would you like to have another battle (y/n):");
-                    input = Console.ReadLine();
-                    if (input == "y")
-                    {
-                        playAgain = true;
-                    }
-                    else
-                    {
-                        playAgain = false;
-                    }
-
-                }
-
-            }
-
-
-        }
+        }   
     }
 }
 
