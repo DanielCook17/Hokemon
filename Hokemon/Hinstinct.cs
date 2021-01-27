@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Hokemon
 {
-    class Hinstinct : Hokemon
+    class Hinstinct : Enemy_Hokemon
     {
         public string team = "Hinstinct";
         public string colour = "Yellow";

@@ -14,8 +14,13 @@ namespace Hokemon
         private int speed;
         private int defence;
         private string team;
-
+        private Boolean isGood;
         // CONSTRUCTOR METHOD FOR THE HOKEMON
+        public Boolean IsGood
+        {
+            get { return isGood; }
+            set { isGood = value; }
+        }
         public string Team
         {
             get { return team; }
