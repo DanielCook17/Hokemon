@@ -68,6 +68,7 @@ namespace Hokemon
              hoke04.definition();
             */
 
+            newBattleObject.requestAChallenger(hoke02);
 
         }   
     }

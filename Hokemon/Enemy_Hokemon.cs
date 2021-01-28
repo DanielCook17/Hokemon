@@ -18,7 +18,7 @@ namespace Hokemon
 
         public void get_details()
         {
-            Console.WriteLine("***************\nName: {0} \nHealth: {1}/{2} \nAttack: {3} \nSpeed: {4} \nDefence {5} \n***************\n", Name, Health, max_health, attack, Speed, defence);
+            Console.WriteLine("***************\nName: {0} \nHealth: {1}/{2} \nAttack: {3} \nSpeed: {4} \nDefence {5} \n***************\n", name, health, max_health, attack, speed, defence);
         }
 
         public void provide_name()
@@ -28,7 +28,7 @@ namespace Hokemon
             Random rnd = new Random();
             int randomValue;
             randomValue = rnd.Next(0, 5);
-            Name = names[randomValue];
+            name = names[randomValue];
 
         }
 
@@ -48,7 +48,7 @@ namespace Hokemon
             int attackValue;
             Random rnd = new Random();
 
-            attackValue = (attack + Speed) / 10 * rnd.Next(1,5);
+            attackValue = (attack + speed) / 10 * rnd.Next(1,5);
 
             return attackValue;
         }
