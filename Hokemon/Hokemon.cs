@@ -9,10 +9,10 @@ namespace Hokemon
         // Hokemon attributes
         private string name;
         private int health;
-        private int max_health;
-        private int attack;
+        public int max_health;
+        public int attack;
         private int speed;
-        private int defence;
+        public int defence;
         private string team;
         private Boolean isGood;
         private string input;
@@ -38,6 +38,13 @@ namespace Hokemon
             get { return health; }
             set { health = value; }
         }
+
+        public int Speed
+        {
+            get { return speed; }
+            set { speed = value; }
+        }
+
         public Hokemon()
         {
             name = "Defaukt";
