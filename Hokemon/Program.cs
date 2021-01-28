@@ -13,8 +13,10 @@ namespace Hokemon
 
             Random rnd = new Random();
 
-            Boolean repeatGame = true;
-            string result;
+            Boolean repeatGame = false;
+            String result;
+            int roundCounter;
+            roundCounter = 0;
 
             Console.WriteLine("Hello welcome to Hokeworld home of the Hokemon\n");
             Console.WriteLine("Press any key to continue...");
@@ -41,16 +43,56 @@ namespace Hokemon
             Console.ReadKey();
             Console.WriteLine("");
 
+            newBattleObject.theBattle(hoke02, playerhoke);
+
+            if (playerhoke.Health > 0)
+            {
+                Console.WriteLine("\nWould you like to play again? (y/n)");
+                result = Console.ReadLine();
+
+                if (result == "y")
+                {
+                    roundCounter++;
+                    repeatGame = true;
+                }
+                if (result == "n")
+                {
+                    repeatGame = false;
+                    Console.WriteLine("\nYour {0} survived {1} rounds! GAME OVER", playerhoke.Name, roundCounter);
+                }
+            }
             while (repeatGame == true)
             {
-                newBattleObject.requestAChallenger(hoke02);
 
                 for (int i = 0; i<3; i++)
                 {
                     ChallengersArray[i] = new Enemy_Hokemon();
                 }
 
+                
                 newBattleObject.theBattle(ChallengersArray[rnd.Next(0, ChallengersArray.Length)], playerhoke);
+
+                if (playerhoke.Health > 0)
+                {
+                    Console.WriteLine("\nWould you like to play again? (y/n)");
+                    result = Console.ReadLine();
+
+                    if (result == "y")
+                    {
+                        roundCounter++;
+                        repeatGame = true;
+                    }
+                    if (result == "n")
+                    {
+                        repeatGame = false;
+                        Console.WriteLine("\nYour {0} survived {1} rounds! GAME OVER", playerhoke.Name, roundCounter);
+                    }
+                }
+                else
+                {
+                    repeatGame = false;
+                    Console.WriteLine("\nYour {0} survived {1} rounds! GAME OVER", playerhoke.Name, roundCounter);
+                }
 
             }
 
@@ -67,8 +109,6 @@ namespace Hokemon
              hoke03.definition();
              hoke04.definition();
             */
-
-            newBattleObject.requestAChallenger(hoke02);
 
         }   
     }

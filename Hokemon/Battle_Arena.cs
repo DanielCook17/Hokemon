@@ -6,14 +6,12 @@ namespace Hokemon
 {
     class Battle_Arena
     {
-        public void requestAChallenger(Enemy_Hokemon requestor)
-        {
-            Console.WriteLine("{0}: 'I want a challenge'", requestor.Name);
-            System.Threading.Thread.Sleep(2000);
-        }
+
 
         public void theBattle(Enemy_Hokemon attacker, Hokemon defender)
         {
+            Console.WriteLine("{0}: 'I want a challenge'", attacker.Name);
+            System.Threading.Thread.Sleep(2000);
             Console.WriteLine("{0}: waits...", attacker.Name);
             System.Threading.Thread.Sleep(2000);
             Console.WriteLine("{0}: and waits...", attacker.Name);
