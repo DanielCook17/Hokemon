@@ -11,6 +11,7 @@ namespace Hokemon
 
         public Halor()
         {
+            provide_name();
             Team = "Halor";
         }
     }

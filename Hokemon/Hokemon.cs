@@ -15,6 +15,7 @@ namespace Hokemon
         private int defence;
         private string team;
         private Boolean isGood;
+        private string input;
         // CONSTRUCTOR METHOD FOR THE HOKEMON
         public Boolean IsGood
         {
@@ -37,9 +38,9 @@ namespace Hokemon
             get { return health; }
             set { health = value; }
         }
-        public Hokemon()
+        public Hokemon() // CONSTRUCTOR method
         {
-            provide_name();
+            name = "Defaukt";
             max_health = 100;
             health = random_int_generator(10, max_health);
             attack = random_int_generator(10, 100);
@@ -98,7 +99,5 @@ namespace Hokemon
 
             return defenceValue;
         }
-
-
     }
 }

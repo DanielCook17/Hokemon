@@ -71,14 +71,14 @@ namespace Hokemon
                     }
 
 
-                    
+                   
                     string defenderChosenAttackMove;
                     string[] defenderAttackMoves = { "Punches", "Bites", "Scratches", "Pummels", "Hurts", "Digs under" };
                     Random defRnd = new Random();
                     int defRandomValue;
                     defRandomValue = defRnd.Next(0, 6);
                     defenderChosenAttackMove = defenderAttackMoves[defRandomValue];
-
+                  
                     if (X == false)
                     {
                         Console.WriteLine("\n****************\n");

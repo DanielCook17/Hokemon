@@ -12,6 +12,7 @@ namespace Hokemon
         // CONSTRUCTOR METHOD FOR THE HOKEMON
         public Enemy_Hokemon()
         {
+            provide_name();
             IsGood = false;
         }
 
